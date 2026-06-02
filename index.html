@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Debt Relief Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="promo-header">
+    <!-- Top Gold Promo Banner -->
+    <div class="gold-ticker-banner">
+        <div class="ticker-content">
+            <img src="images/banner_gift_1.png"/>
+        </div>
+    </div>
+
+    <!-- Main Branding Area -->
+     <div>
+        <img src="images/Screenshot 2026-06-03 022739.png"/>
+     </div>
+    
+</header>
+<main class="page-body-wrapper">
+    <div class="content-container">
+
+        <!-- 1. CONGRATULATIONS CARD -->
+        <section class="congratulations-card">
+    <div class="card-left-column">
+        <h2 class="card-title">CONGRATULATIONS!</h2>
+        
+        <p class="card-description">
+            Complete this short survey about your <strong>Sam's Club</strong> experience<br>
+            and select your gift offer of up to <strong>$100</strong> cash value.
+        </p>
+        
+        <p class="card-deadline">
+            This special is available until <strong id="promo-date">June 3, 2026</strong>
+        </p>
+        
+        <div class="card-timer">
+            TIME REMAINING: <span id="countdown">5:50</span>
+        </div>
+        
+        <button type="button" class="btn-accept-premium">
+            <span class="btn-shine"></span>
+            ACCEPT
+        </button>
+    </div>
+
+    <div class="card-right-column">
+        <img src="images/maingiftblock.webp" alt="Festive Gifts and Balloons Layout" class="gift-graphic-asset" style="width: 200px; height:200px;">
+    </div>
+</section>
+
+<script>
+    // Continuous 5 Minute 50 Second countdown loop script
+    let totalSeconds = 350; 
+    const countdownElement = document.getElementById('countdown');
+
+    setInterval(() => {
+        if (totalSeconds <= 0) {
+            totalSeconds = 350; // Resets automatically to preserve layout urgency 
+        }
+        totalSeconds--;
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        countdownElement.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }, 1000);
+</script>
+
+        <!-- 2. RECENT COMMENTS FEED -->
+        <section class="comments-container">
+            <h3 class="comments-title">Recent Comments:</h3>
+
+            <!-- Comment Input Box Area -->
+            <div class="comment-input-row">
+                <input type="text" placeholder="Write a comment..." aria-label="Write a comment">
+                <button type="button" class="btn-publish">Publish</button>
+            </div>
+
+            <!-- Individual Feed Cards -->
+            <div class="comments-feed">
+
+                <!-- Comment 1 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Mario J Silva</span>
+                                <span class="time-stamp">8 Hours Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge verified">✓ Verified customer</span>
+                    </div>
+                    <p class="comment-text">I was really bored so I decided to take the survey. I ordered the Robot Vacuum and it worked really well on both my carpet and hard floor!</p>
+                    <div class="heart-counter">❤️ 12</div>
+                </div>
+
+                <!-- Comment 2 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Viviana Robles</span>
+                                <span class="time-stamp">14 Hours Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge verified">✓ Verified customer</span>
+                    </div>
+                    <p class="comment-text">I decided to order the portable blender to try get healthy. So far so good.</p>
+                    <div class="heart-counter">❤️ 17</div>
+                </div>
+
+                <!-- Comment 3 (With Product Image Attachment) -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Dana Byerly</span>
+                                <span class="time-stamp">1 Day Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge verified">✓ Verified customer</span>
+                    </div>
+                    <!-- Box Placeholder matching the 4K Sports camera packaging seen in 2nd section.jpg -->
+                    <div class="attached-img-placeholder">📸 4K Sports Cam Box</div>
+                    <p class="comment-text">The order is fine only the packaging arrived a little crushed shortly I will test the camera that seems to have arrived healthy</p>
+                    <div class="heart-counter">❤️ 25</div>
+                </div>
+
+                <!-- Comment 4 (With Product Image Attachment) -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Daniel Martinez</span>
+                                <span class="time-stamp">1 Day Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge unverified">Unverified customer</span>
+                    </div>
+                    <!-- Box Placeholder matching the open drone kit bag in 2nd section.jpg -->
+                    <div class="attached-img-placeholder">🛸 Drone Unboxing</div>
+                    <p class="comment-text">Wow this Drone is perfect, i can't believe i just paid shipping and got a Drone from doing a survey!</p>
+                    <div class="heart-counter">❤️ 28</div>
+                </div>
+
+                <!-- Comment 5 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Georgina Allen</span>
+                                <span class="time-stamp">2 Days Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge verified">✓ Verified customer</span>
+                    </div>
+                    <p class="comment-text">Just got a cheap Dashcam! So so good!</p>
+                    <div class="heart-counter">❤️ 16</div>
+                </div>
+
+                <!-- Comment 6 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="user-meta">
+                            <div class="avatar-placeholder"></div>
+                            <div>
+                                <span class="user-name">Warren Geiger</span>
+                                <span class="time-stamp">2 Days Ago</span>
+                            </div>
+                        </div>
+                        <span class="badge unverified">Unverified customer</span>
+                    </div>
+                    <p class="comment-text">I cant believe it, i just got my packaged delivered this morning</p>
+                    <div class="heart-counter">❤️ 29</div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<script>
+    // 1. Force matching active promo date logic
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('promo-date').innerText = new Date().toLocaleDateString('en-US', dateOptions);
+
+    // 2. Continuous 1 Minute 6 Second Ticker Countdown Loop
+    let totalSeconds = 66; 
+    const countdownElement = document.getElementById('countdown');
+
+    setInterval(() => {
+        if (totalSeconds <= 0) {
+            totalSeconds = 66; // Reset countdown once it hits zero to keep user urgency active
+        }
+        totalSeconds--;
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        countdownElement.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }, 1000);
+</script>
+
+
+
+</body>
+</html>
